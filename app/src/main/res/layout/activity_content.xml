@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Content"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/smartnnect"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/DarkOrange" />
+
+    <ImageView
+        android:id="@+id/imgcontent"
+        android:layout_width="match_parent"
+        android:layout_height="231dp"
+        tools:srcCompat="@drawable/myimg" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/smartnnect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <FrameLayout
+                android:id="@+id/applovinnaive"
+                android:layout_width="match_parent"
+                android:layout_height="142dp">
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="269dp" />
+
+            <TextView
+                android:id="@+id/textcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="bababbabababbabababbabababbabababbababababbabababbabababababbabababbababababbababababbababababababbabababababbabab"
+                android:textSize="20dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"/>
+
+            <FrameLayout
+                android:id="@+id/applovinnaive"
+                android:layout_width="match_parent"
+                android:layout_height="127dp"
+                tools:ignore="DuplicateIds">
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Content"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/smartnnect"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/DarkOrange" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/NavajoWhite"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/showdata"
+                android:layout_width="match_parent"
+                android:layout_height="686dp"
+                android:background="@color/NavajoWhite"
+                android:layoutAnimation="@anim/item_layout_animation"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/itemlist" />
+
+            <FrameLayout
+                android:id="@+id/applovinnaive"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/NavajoWhite"
+                tools:ignore="DuplicateIds">
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
