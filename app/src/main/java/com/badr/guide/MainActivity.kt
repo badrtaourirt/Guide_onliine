@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
+import com.applovin.sdk.AppLovinSdk
 import com.badr.guide.Ads.Companion.interstitialAd
 import com.badr.guide.`interface`.OnItemClickListener
 import com.badr.guide.adapter.MainReyclerView
@@ -49,6 +50,7 @@ companion object{
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
+            AppLovinSdk.getInstance( this ).showMediationDebugger()
 
             json(this)
             showdata = findViewById(R.id.showdata)

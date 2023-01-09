@@ -64,6 +64,10 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
     implementation "com.airbnb.android:lottie:4.2.2"
     implementation 'com.suddenh4x.ratingdialog:awesome-app-rating:2.5.0'
+    implementation("com.applovin.mediation:facebook-adapter:+")
+    implementation("com.applovin.mediation:google-adapter:+")
+
+
 
 
 
