@@ -50,7 +50,6 @@ companion object{
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
-            AppLovinSdk.getInstance( this ).showMediationDebugger()
 
             json(this)
             showdata = findViewById(R.id.showdata)
