@@ -10,7 +10,49 @@
         android:id="@+id/smartnnect"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/DarkOrange" />
+        android:background="@color/DarkOrange" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/homemain"
+                android:layout_width="67dp"
+                android:layout_height="55dp"
+                android:background="@drawable/custom_ripple"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                app:srcCompat="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/sharemain"
+                android:background="@drawable/custom_ripple"
+                android:layout_width="54dp"
+                android:layout_height="46dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.955"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_share" />
+
+            <ImageView
+                android:id="@+id/rate"
+                android:background="@drawable/custom_ripple"
+                android:layout_width="66dp"
+                android:layout_height="54dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_review" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
     <ScrollView
         android:layout_width="match_parent"

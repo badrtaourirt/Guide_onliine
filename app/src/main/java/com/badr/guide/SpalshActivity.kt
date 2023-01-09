@@ -19,18 +19,21 @@ class SpalshActivity : AppCompatActivity() {
         jsonads(this)
         ads.adsinit(this)
 
+
+
+
         val splashThread: Thread = object : Thread() {
             override fun run() {
                 try {
                     var waited = 0
-                    while (waited < 2000) {
+                    while (waited < 1000) {
                         sleep(1000)
                         waited += 100
                     }
                 } catch (e: InterruptedException) {
                     // do nothing
                 } finally {
-                    val i = Intent(applicationContext, MainActivity::class.java)
+                    val i = Intent(applicationContext, Privacy::class.java)
                     startActivity(i)
                     finish()
                 }

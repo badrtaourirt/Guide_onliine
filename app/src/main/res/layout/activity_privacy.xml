@@ -1,14 +1,50 @@
-<resources>
-    <string name="app_name">Guide</string>
-    <string name="rating_dialog_experience">amazing guide </string>
-    <string name="rating_dialog_maybe_later">Later</string>
-    <string name="rating_dialog_never">Never</string>
-    <string name="submit_feedback">Submit</string>
-    <string name="rating_dialog_suggestions">suggestions</string>
-    <string name="rating_dialog_cancel">Cancel</string>
-    <string name="rating_dialog_submit">submit</string>
-    <string name="policy_title">Welcome, dear user\nPlease take some time to read our privacy policy:</string>
-    <string name="privacy_policy">This Privacy Policy explains how we collect, use and share your personal information while you use the Service.\n\nBy using the Service you agree to the collection and use of your personal information in accordance with the Privacy Policy.\n\nThis Privacy Policy forms part of our Terms of Service.\n\nWe will review and may update this Privacy Policy from time to time.\n\nAny changes to this Privacy Policy will become effective when we post the revised Privacy Policy on this page.\n\n1. Data we collect\n\nThe information we collect can be generally placed in following categories: data on how you use our Service and aggregate data on content you engage with.\nWe may use this information to personalize and improve our services, to fulfill your requests and to analyze how you use our Service.\nWe may provide this information to our partners, so that they, too, can provide you with an optimal experience, but we never disclose information to a partner in a manner that would identify you personally.
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Coral">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Welcome, dear user Please take some time to read our privacy"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/LightSalmon"
+        app:layout_constraintBottom_toTopOf="@+id/policyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="This Privacy Policy explains how we collect, use and share your personal information while you use the Service.\n\nBy using the Service you agree to the collection and use of your personal information in accordance with the Privacy Policy.\n\nThis Privacy Policy forms part of our Terms of Service.\n\nWe will review and may update this Privacy Policy from time to time.\n\nAny changes to this Privacy Policy will become effective when we post the revised Privacy Policy on this page.\n\n1. Data we collect\n\nThe information we collect can be generally placed in following categories: data on how you use our Service and aggregate data on content you engage with.\nWe may use this information to personalize and improve our services, to fulfill your requests and to analyze how you use our Service.\nWe may provide this information to our partners, so that they, too, can provide you with an optimal experience, but we never disclose information to a partner in a manner that would identify you personally.
 \n\nUnless stated otherwise in this Privacy Policy, the personal data that you provide us will only be stored for as long as it is necessary for us to fulfill our obligations in respect of the provision of the Service.\nWe processes your personal data only if you have provided consent to the processing of such data; or processing of the personal data is necessary for the execution of the agreement with the you; or the relevant personal data are made publicly available and are in the public domain; or the processing of the personal data should be carried out in accordance with the requirements of applicable law, a resolution of a court or a competent state or municipal authority.
 \n\nWe take technical, organizational and other measures or ensure their adoption to protect your personal data from unauthorized or accidental access, collection, storage, use, transfer, blocking or destruction, as well as from other illegal actions or accidental leaks. A secure HTTPS connection is used, providing a high degree of data security.
 \n\n2. Purposes of collection\n\nWe use the information we collect about you to analyse the performance of the Service for marketing and strategic development purposes and maintain, improve or modify the Service, target and personalize advertisements that we display on the Service and other websites. We rely on its legitimate interests, described above, to process your data. We may also use information provided by you directly to us in order to correspond with you and to address any issues you raise about the Service. We do not collect or process any special categories of personal data. We do not undertake automated decision making or profiling on the data which are provided to us.
@@ -18,8 +54,37 @@
 \n\n6. Rights under GDPR\n\nIf you reside in the EEA under the General Data Protection Regulation (\“GDPR\”) you have rights to have access to your personal information and ask us to rectify, erase and restrict the use of your personal information. You also have rights to object to your personal information being used, to ask for the transfer of personal information you have made available to us and to withdraw consent to the use of your personal information, the right to restrict our use of information that constitutes your personal data for marketing purposes and lodge a complaint or direct questions to the data protection authority. In the event your personal information is transferred, stored or processed outside of the EEA, we will take all steps reasonably necessary to ensure that your personal information is treated securely and in accordance with this Privacy Policy and GDPR.
 \n\n7. Rights under CCPA\n\nThe California Consumer Privacy Act (\“CCPA\”) provides additional rights to California residents to know, delete and opt-out, and requires businesses collecting or disclosing personal information to provide notices and means to exercise rights. We do not generally sell information as the term \“sell\” is traditionally understood. To the extent \“sale\” under the CCPA is interpreted to include the activities set out in this Privacy Policy, we will comply with applicable law as to such activity. You have the right to know certain details about our data practices and the right to delete the personal information we have collected from you.
 \n\n8. Contact information\n\nIf you would like to exercise your rights, please send your request at support@irondev.ma. In the request, please specify which right you are seeking to exercise and the scope of the request. This email may also be used in case you have any questions regarding your personal data use or about this Privacy Policy.
-\n\nEffective July 1, 2022</string>
+\n\nEffective July 1, 2022"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="16sp" />
 
+        </LinearLayout>
+    </ScrollView>
 
-    <string name="des">balalblablablalalalalalallalalalalallalalallalalallal</string>
-</resources>
+    <FrameLayout
+        android:id="@+id/policyButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CheckBox
+            android:id="@+id/policyCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:clickable="false"
+            android:minHeight="48dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="I have read everything and I accept all the condition mentioned"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

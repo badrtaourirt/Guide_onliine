@@ -35,7 +35,6 @@ class MainReyclerView(
 
         var title: TextView = itemView.findViewById(R.id.title)
         var img: ImageView = itemView.findViewById(R.id.itemimage)
-        var actionimage: ImageView = itemView.findViewById(R.id.actionimage)
 
 
         fun bind(model: Model, position: Int){
@@ -48,7 +47,7 @@ class MainReyclerView(
                 .placeholder(R.drawable.ic_loading)
                 .dontAnimate()
                 .into(img);
-            actionimage.setImageResource(model.actionimage)
+          /*  actionimage.setImageResource(model.actionimage)
 
             actionimage.setOnClickListener{
 
@@ -73,7 +72,7 @@ class MainReyclerView(
             }
 
 
-
+*/
 
 
 

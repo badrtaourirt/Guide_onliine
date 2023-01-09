@@ -1,5 +1,6 @@
 package com.badr.guide
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -14,6 +15,8 @@ class Content : AppCompatActivity() {
     private var adView: MaxAdView? = null
     lateinit var textcontent : TextView
     var ads: Ads = Ads()
+    lateinit var back:ImageView
+    lateinit var share : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +27,21 @@ class Content : AppCompatActivity() {
         ads.adsinit(this)
         ads.createNativeAd(this)
         ads.createBannerAd(this)
+        back=findViewById(R.id.back)
+        share=findViewById(R.id.share)
+        back.setOnClickListener(){
+
+           val intent=Intent(applicationContext,MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        share.setOnClickListener {
+            val intent= Intent()
+            intent.action=Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT,"Hey Check out this Great app:")
+            intent.type="text/plain"
+            startActivity(Intent.createChooser(intent,"Share To:"))
+        }
 
         val guidedata = intent.getSerializableExtra(MainActivity.guide_data) as Model
         Glide

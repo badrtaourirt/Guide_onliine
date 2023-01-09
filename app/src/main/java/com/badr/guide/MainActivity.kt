@@ -2,8 +2,10 @@ package com.badr.guide
 
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +16,8 @@ import com.badr.guide.Ads.Companion.interstitialAd
 import com.badr.guide.`interface`.OnItemClickListener
 import com.badr.guide.adapter.MainReyclerView
 import com.badr.guide.model.Model
-
+import com.suddenh4x.ratingdialog.AppRating
+import com.suddenh4x.ratingdialog.preferences.RatingThreshold
 
 
 class MainActivity : AppCompatActivity(), OnItemClickListener {
@@ -32,7 +35,9 @@ companion object{
 
         lateinit var showdata: RecyclerView
         var ads: Ads = Ads()
-
+        lateinit var homemain : ImageView
+        lateinit var sharemain : ImageView
+        lateinit var rate : ImageView
         var guideList: ArrayList<Model> = ArrayList()
 
         private val mainReyclerView: MainReyclerView by lazy {
@@ -52,8 +57,38 @@ companion object{
             ads.adsinit(this)
             ads.createBannerAd(this)
             interstitialAd.loadAd()
+            homemain = findViewById(R.id.homemain)
+            sharemain = findViewById(R.id.sharemain)
+            rate=findViewById(R.id.rate)
+            AppRating.Builder(this)
+                .setMinimumLaunchTimes(10)
+                .setMinimumDays(0)
+                .setMinimumLaunchTimesToShowAgain(5)
+                .setMinimumDaysToShowAgain(10)
+                .setRatingThreshold(RatingThreshold.FOUR)
+                .showIfMeetsConditions()
+            homemain.setOnClickListener(){
 
-            Log.d("bannerp","${ Ads.interstitialAd.loadAd()}")
+                val intent=Intent(applicationContext,MainActivity::class.java)
+                startActivity(intent)
+            }
+
+            sharemain.setOnClickListener(){
+                val intent= Intent()
+                intent.action=Intent.ACTION_SEND
+                intent.putExtra(Intent.EXTRA_TEXT,"Hey Check out this Great app:")
+                intent.type="text/plain"
+                startActivity(Intent.createChooser(intent,"Share To:"))
+            }
+
+            rate.setOnClickListener(){
+
+                val url = "https://play.google.com/store/apps/details?id="+packageName
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+
+            }
+
+
 
 
         }

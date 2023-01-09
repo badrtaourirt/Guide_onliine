@@ -2,6 +2,11 @@
 buildscript {
     repositories {
         maven { url = uri("https://artifacts.applovin.com/android") }
+        maven { url 'https://jitpack.io' }
+
+
+
+
     }
     dependencies {
         classpath ("com.applovin.quality:AppLovinQualityServiceGradlePlugin:+")

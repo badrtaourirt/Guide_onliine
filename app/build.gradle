@@ -17,12 +17,12 @@ applovin {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.badr.guide"
         minSdk 30
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -62,7 +62,8 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
     implementation"com.applovin:applovin-sdk:+"
     implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
-
+    implementation "com.airbnb.android:lottie:4.2.2"
+    implementation 'com.suddenh4x.ratingdialog:awesome-app-rating:2.5.0'
 
 
 
